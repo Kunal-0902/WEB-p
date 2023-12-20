@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarogyamm</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/search.css">
+
+    <style>
+        .home-tabcontent {
+            padding: 10px;
+            background-color: #fbf8f8;
+            margin: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .home-tabcontent header h1 {
+            font-family: sans-serif;
+            margin: 5px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+            font-size: x-large;
+        }
+
+        .count {
+            height: 430px;
+            padding: 8px;
+            background-color: #fbf8f8;
+            margin: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+       
+        .count h1 {
+            display: block;
+            margin: 5px;
+            padding: 5px;
+            font-size: x-large;
+            /* font-family: sans-serif; */
+            border-bottom: 2px solid;
+        }
+
+        .div_2 {
+            display: inline-flex;
+            width: 665px;
+            height: 375px;
+            overflow: auto;
+            border: 2px solid;
+        }
+
+        .div_3 {
+            /* padding: 5px; */
+            width: 665px;
+            height: 375px;
+            border: 2px solid;
+        }
+        
+        .div_3 button{
+            position: absolute;
+            right: 75px;
+            bottom: 75px;
+            width: 75px;
+            height: 50px;
+            border-radius: 25px 25px;
+        }
+        .div_3 h3{
+            padding: 20px;
+        }
+
+        #billing-counterForm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #billing-counterForm .home-form-group {
+            flex: 0 0 calc(25% - 10px);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #addCustomerForm .home-form-group {
+                flex: 0 0 100%;
+            }
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: fit-content;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #9a9898;
+        }
+
+        .div_2 tbody td {
+            padding: 10px; 
+            text-align: center;
+        }
+
+        th {
+
+            position: sticky;
+            top: 0;
+            background-color: #a46161;
+            height: fit-content;
+            padding: 10px;
+            text-align: center;
+            /* background-color: #f2f2f2; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navebar -->
+        <div class="navbar" id="myNavbar"></div>
+    </header>
+
+    <div id="customer" class="home-tabcontent">
+        <header>
+            <h1>Billing Counter</h1>
+        </header>
+        <main class="product-details">
+            <form id="billing-counterForm">
+                <div class="home-form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" list="productNames">
+                </div>
+
+                <div class="home-form-group">
+                    <label for="productQuantity">Quantity:</label>
+                    <input type="number" id="productQuantity" min="1" value="1" onchange="calculatePrice()">
+                </div>
+
+                <div class="home-form-group">
+                    <label for="productPrice">Unit Price:</label>
+                    <input type="number" id="productPrice">
+                </div>
+
+                <button type="submit" id="home_tab">Add Cart</button>
+
+            </form>
+        </main>
+    </div>
+
+    <div class="count">
+        <h1>Cart</h1>
+
+        <div style="display: flex; justify-content:space-evenly;">
+            <div class="div_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>Almond oil</td>
+                            <td>2</td>
+                            <td>120</td>
+                            <td>240</td>
+                            <td>add</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>Almond oil</td>
+                            <td>2</td>
+                            <td>120</td>
+                            <td>240</td>
+                            <td>add</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>Almond oil</td>
+                            <td>2</td>
+                            <td>120</td>
+                            <td>240</td>
+                            <td>add</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>Almond oil</td>
+                            <td>2</td>
+                            <td>120</td>
+                            <td>240</td>
+                            <td>add</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="div_3">
+                <h3>Total Amount: Rs<span id="totalAmount">0.00</span></h3>
+              
+                <button type="submit">Billing</button>
+           
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/rep.js"></script>
+
+    <script>
+        //         function openTab(tabName) {
+        //     var i, tabcontent;
+
+        //     // Hide all tabs
+        //     tabcontent = document.getElementsByClassName("tabcontent");
+        //     for (i = 0; i < tabcontent.length; i++) {
+        //         tabcontent[i].style.display = "none";
+        //     }
+
+        //     // Show the clicked tab
+        //     document.getElementById(tabName).style.display = "block";
+
+        //     // Close the navbar on small screens after clicking a tab
+        //     var navbar = document.getElementById("myNavbar");
+        //     if (window.innerWidth <= 600) {
+        //         navbar.classList.remove("responsive");
+        //     }
+        // }
+
+        function toggleNavbar() {
+            var navbar = document.getElementById("myNavbar");
+            navbar.classList.toggle("responsive");
+        }
+
+    </script>
+</body>
+
+</html>

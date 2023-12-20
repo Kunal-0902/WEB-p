@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarogyamm</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/search.css">
+
+    <style>
+ .pro-tab-container {
+    display: flex;
+    justify-content : center;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-color: #eaf2ef; /* Light green-blue */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.pro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 15px;
+    height: 300px;
+    min-width: 175px;
+    border-radius: 12px;
+    background-color: #f7f7f7; /* Light gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pro-card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    margin: 10px;
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #4a90e2; /* Royal blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #4169e1; /* Slightly darker royal blue on hover */
+}
+
+.new-pro{
+    position:fixed;
+    right: 3vw;
+    bottom: 5vh;
+    height: 45px;
+    width: 120px;
+    background-color: #4a90e2; /* Royal blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.new-Stock{
+    position:fixed;
+    right: 3vw;
+    bottom: 15vh;
+    height: 45px;
+    width: 120px;
+    background-color: #4a90e2; /* Royal blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media screen and (max-width : 600px) {
+    .new-Stock{
+    height: 35px;
+    width: 100px;
+    background-color: #4a90e2; /* Royal blue */
+    color: white;
+    font-size: 13px;
+}
+    .new-pro{
+    height: 35px;
+    width: 105px;
+    background-color: #4a90e2; /* Royal blue */
+    color: white;
+    font-size: 13px;
+}
+    
+}
+    </style>
+</head>
+
+<body>
+
+    <header> 
+        <!-- Navebar -->
+        <div class="navbar" id="myNavbar"></div>
+      </header>
+
+
+
+    <div class="pro-tab-container">
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+        <div class="pro-card">
+            <div><img src="/static/img/Soya.png" alt=""></div>
+            <div>
+                <h3>Soya Oil 1L</h3>
+                <h3>Rs. 121</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+        <div class="pro-card">
+            <div><img src="/static/img/G p.png" alt=""></div>
+            <div>
+                <h3>Groundnut Oil 1L</h3>
+                <h3>Rs. 255</h3>
+            </div>
+            <div>
+                <button>more info</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="/static/js/script.js"></script>
+<script src="/static/js/index.js"></script>
+    
+    <script src="/static/js/rep.js"></script>
+</body>
+
+</html>

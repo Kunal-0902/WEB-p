@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Dz0jA6w1XR+XnWcCs3spNzKr3Np+JpLr6aFl/6GL1rw9C1vVXLX0Lh6OqEmsY10YFx2MIi3RvYYz6W3Rvym53A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-details h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .profile-details p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .admin-section {
+            margin-top: 30px;
+        }
+
+        .admin-section h3 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .admin-credentials {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .recent-activities {
+            margin-top: 30px;
+        }
+
+        .activity-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .quick-menu {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .quick-menu-item {
+            text-align: center;
+            padding: 15px;
+            margin: 10px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src="profile-picture.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2>Admin Name</h2>
+                <p>Email: admin@example.com</p>
+                <p>Role: Administrator</p>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="admin-section">
+                <h3>Admin Credentials</h3>
+                <div class="admin-credentials">
+                    <div>
+                        <p><strong>Username:</strong> admin_user</p>
+                        <p><strong>Password:</strong> *********</p>
+                    </div>
+                    <div>
+                        <p><strong>Last Login:</strong> mm/dd/yyyy, hh:mm AM/PM</p>
+                        <p><strong>IP Address:</strong> 192.168.1.1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activities">
+                <h3>Recent Activities</h3>
+                <div class="activity-item">
+                    <p><strong>Action:</strong> Updated user profiles</p>
+                    <p><strong>Date:</strong> mm/dd/yyyy, hh:mm AM/PM</p>
+                </div>
+                <div class="activity-item">
+                    <p><strong>Action:</strong> Added new product</p>
+                    <p><strong>Date:</strong> mm/dd/yyyy, hh:mm AM/PM</p>
+                </div>
+                <!-- Additional activity items can be added here -->
+            </div>
+
+            <div class="quick-menu">
+                <div class="quick-menu-item">
+                    <i class="fas fa-users fa-2x"></i>
+                    <p>Manage Users</p>
+                </div>
+                <div class="quick-menu-item">
+                    <i class="fas fa-cog fa-2x"></i>
+                    <p>Settings</p>
+                </div>
+                <div class="quick-menu-item">
+                    <i class="fas fa-chart-bar fa-2x"></i>
+                    <p>Analytics</p>
+                </div>
+                <!-- Additional quick menu items can be added here -->
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
+
+<!-- editable profile picture -->
+<!-- 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Dz0jA6w1XR+XnWcCs3spNzKr3Np+JpLr6aFl/6GL1rw9C1vVXLX0Lh6OqEmsY10YFx2MIi3RvYYz6W3Rvym53A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Your existing styles here... */
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        #changePictureLabel {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: block;
+        }
+
+        #preview {
+            margin-top: 20px;
+        }
+
+        #preview img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <main>
+            <div class="profile-container">
+                <label for="fileInput" id="changePictureLabel">Change Profile Picture</label>
+                <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+                <div class="profile-picture" id="preview">
+                    <img src="profile-picture.jpg" alt="Profile Picture">
+                </div>
+ ***************... (rest of your content) ...**************************
+            </div>
+        </main>
+    </button>
+
+    <script>
+        function previewImage(event) {
+            const fileInput = event.target;
+            const preview = document.getElementById('preview');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const imageUrl = e.target.result;
+                    preview.innerHTML = `<img src="${imageUrl}" alt="Profile Picture">`;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
+
+ -->
+
+
+
